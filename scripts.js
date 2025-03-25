@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-    // Custom JavaScript can be added here
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM повністю завантажений і проаналізований');
+    // Тут можна додати свій JavaScript код для додаткової функціональності
 });
