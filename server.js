@@ -11,10 +11,10 @@ const server = http.createServer(app);
 const io = socketio(server);
 const port = 3000;
 
-// Connect to MongoDB
+// Підключення до MongoDB
 mongoose.connect('mongodb://localhost:27017/chatApp', { useNewUrlParser: true, useUnifiedTopology: true });
 
-// User schema
+// Схема користувача
 const userSchema = new mongoose.Schema({
     username: String,
     email: String,
@@ -85,17 +85,17 @@ app.get('/logout', (req, res) => {
 });
 
 io.on('connection', socket => {
-    console.log('New connection');
+    console.log('Нове з\'єднання');
 
     socket.on('chatMessage', msg => {
         io.emit('message', msg);
     });
 
     socket.on('disconnect', () => {
-        console.log('User disconnected');
+        console.log('Користувач відключився');
     });
 });
 
 server.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Сервер запущено на http://localhost:${port}`);
 });
