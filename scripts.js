@@ -1,2 +1,4 @@
-// Додайте ваш JavaScript код тут
-console.log("Ласкаво просимо на Free Games UA!");
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    // Custom JavaScript can be added here
+});
