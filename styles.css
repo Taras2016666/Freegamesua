@@ -1,46 +1,89 @@
-body {
-    font-family: Arial, sans-serif;
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav ul li a {
-    text-decoration: none;
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
+/* Header */
+header {
+    background: #4CAF50;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Main Content */
 main {
-    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 section {
-    margin-bottom: 2rem;
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background: #333;
+    color: white;
+    width: 100%;
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
     position: fixed;
     bottom: 0;
-    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.animate__fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animate__slide-in-left {
+    animation: slideInLeft 2s ease-in-out;
+}
+
+.animate__slide-in-right {
+    animation: slideInRight 2s ease-in-out;
+}
+
+.animate__slide-up {
+    animation: slideUp 2s ease-in-out;
 }
