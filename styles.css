@@ -13,34 +13,59 @@ body {
 }
 
 header {
-    background: #0078d4;
+    background: linear-gradient(90deg, #0078d4, #005ba1);
     color: white;
     padding: 20px 0;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     margin-bottom: 10px;
+    font-size: 2em;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
 header nav ul li {
     display: inline;
-    margin: 0 10px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 header nav ul li a:hover {
     text-decoration: underline;
+}
+
+.auth-links {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-links .btn {
+    background: white;
+    color: #0078d4;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.auth-links .btn:hover {
+    background: #005ba1;
+    color: white;
 }
 
 .container {
@@ -50,7 +75,7 @@ header nav ul li a:hover {
 }
 
 #hero {
-    background: #0078d4;
+    background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 0;
     text-align: center;
@@ -83,6 +108,7 @@ header nav ul li a:hover {
 
 .content-section {
     padding: 50px 0;
+    text-align: center;
 }
 
 .content-section:nth-of-type(even) {
@@ -111,6 +137,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: 50px;
 }
 
 a {
